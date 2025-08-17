@@ -59,6 +59,8 @@ export const startScheduler = (): void => {
         await sendToDiscord("", embed);
 
         LastPrices[symbol] = price;
+
+        console.log(`${symbol} price changed: $${price.toFixed(2)}`);
       } else {
         console.log(`${symbol} price unchanged: $${price.toFixed(2)}`);
       }
