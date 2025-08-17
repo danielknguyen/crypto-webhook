@@ -1,7 +1,7 @@
-import { Symbols } from "./types.js";
+import { Symbols, CronSchedule } from "./types.js";
 
 export const TRACKED_PAIRS: Symbols[] = [Symbols.ETHUSDT];
 
-// string (standard cron format) that tells a scheduler when to run a job. ex.
-// Run the task every 15 minutes, no matter the hour, day, month, or day of week.
-export const CRON_EXPRESSION = ["*/15 * * * *"];
+export const CRON_EXPRESSION = CronSchedule.ONE_MINUTE;
+
+export const THRESHOLD_PERCENT = 0.1; // only notify if price changes >= 0.1
