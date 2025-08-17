@@ -1,4 +1,4 @@
-import { Symbols, CronSchedule } from "./types.ts";
+import { Symbols, CronSchedule } from "./types.js";
 
 export const TRACKED_PAIRS: Symbols[] = [Symbols.ETHUSDT];
 

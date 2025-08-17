@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { SymbolType } from "../types.ts";
+import type { SymbolType } from "../types.js";
 
 const BASE_URL = "https://api.binance.us";
 

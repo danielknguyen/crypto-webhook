@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { TRACKED_PAIRS } from "../config.ts";
-import { getCurrentPrice } from "../services/binance.ts";
-import { sendToDiscord } from "../services/discord.ts";
+import { TRACKED_PAIRS } from "../config.js";
+import { getCurrentPrice } from "../services/binance.js";
+import { sendToDiscord } from "../services/discord.js";
 
 const router = Router();
 
