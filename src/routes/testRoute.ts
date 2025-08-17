@@ -38,10 +38,10 @@ router.get("/webhook_binance_test", async (_, res) => {
           `Testing: Current price of ${symbol} is **$${price.toFixed(2)}**`
         );
 
-        return symbol; // return symbol if message sent
+        return symbol;
       }
 
-      return null; // no message sent
+      return null;
     });
 
     // Wait for all tasks to complete
