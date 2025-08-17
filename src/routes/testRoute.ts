@@ -1,9 +1,13 @@
 import { Router } from "express";
-import { TRACKED_PAIRS } from "../config.js";
-import { getCurrentPrice } from "../services/binance.js";
-import { sendToDiscord } from "../services/discord.js";
+import { TRACKED_PAIRS } from "../config.ts";
+import { getCurrentPrice } from "../services/binance.ts";
+import { sendToDiscord } from "../services/discord.ts";
 
 const router = Router();
+
+router.get("/", async (_, res) => {
+  res.send("Hello World!");
+});
 
 router.get("/test", async (_, res) => {
   for (const symbol of TRACKED_PAIRS) {
@@ -14,9 +18,9 @@ router.get("/test", async (_, res) => {
         `Testing: Current price of ${symbol} is **$${price.toFixed(2)}**`
       );
     }
-
-    res.send("Test messages sent to Discord");
   }
+
+  res.send("Test messages sent to Discord");
 });
 
 export default router;
