@@ -3,10 +3,10 @@ import {
   TRACKED_PAIRS,
   CRON_EXPRESSION,
   THRESHOLD_PERCENT,
-} from "../config.js";
-import { Colors } from "../types.js";
-import { getCurrentPrice } from "./binance.js";
-import { sendToDiscord } from "./discord.js";
+} from "../config.ts";
+import { Colors } from "../types.ts";
+import { getCurrentPrice } from "./binance.ts";
+import { sendToDiscord } from "./discord.ts";
 
 const LastPrices: Record<string, number | null> = {};
 

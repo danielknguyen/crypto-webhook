@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { SymbolType } from "../types.js";
+import type { SymbolType } from "../types.ts";
 
 export const getCurrentPrice = async (
   symbol: SymbolType
