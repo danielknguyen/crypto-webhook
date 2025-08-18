@@ -3,6 +3,12 @@ import type { SymbolType } from "../types.js";
 
 const BASE_URL = "https://api.binance.us";
 
+/**
+ * Fetches the current price of a symbol from Binance.
+ *
+ * @param {SymbolType} symbol - The symbol to fetch the price of.
+ * @return {Promise<number | null>} A promise that resolves to the current price of the symbol, or null if an error occurred.
+ */
 export const getCurrentPrice = async (
   symbol: SymbolType
 ): Promise<number | null> => {
