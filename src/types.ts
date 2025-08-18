@@ -1,8 +1,16 @@
+import { DiscordBot } from "./services/discordBot.js";
+
 export enum Symbols {
   ETHUSDT = "ETHUSDT",
   BTCUSDT = "BTCUSDT",
   SOLUSDT = "SOLUSDT",
 }
+
+export const SymbolShort: Record<Symbols, string> = {
+  [Symbols.ETHUSDT]: "ETH",
+  [Symbols.BTCUSDT]: "BTC",
+  [Symbols.SOLUSDT]: "SOL",
+};
 
 export enum CronSchedule {
   ONE_MINUTE = "*/1 * * * *",
@@ -14,10 +22,17 @@ export enum CronSchedule {
   ONE_DAY = "0 9 * * *", // daily at 9am UTC
 }
 
-export enum Colors {
-  Green = 0x00ff00,
-  Red = 0xff0000,
+export enum Arrow {
+  Up = "↑",
+  Down = "↓",
+  Null = "",
 }
 
 export type SymbolType = keyof typeof Symbols;
 export type SymbolValue = (typeof Symbols)[SymbolType];
+
+export type TrackedBot = {
+  bot: DiscordBot;
+  symbol: SymbolType;
+  previousPrice: number | null;
+};
